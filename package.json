@@ -4,7 +4,7 @@
   "description": "Express based web api model",
   "main": "src/server.js",
   "scripts": {
-    "start": "echo 'Nothing to start'"
+    "start": "node src/server.js"
   },
   "author": "",
   "license": "ISC",
