@@ -1,13 +1,15 @@
-const Welcome = require("./controllers/welcome.controller");
+const welcome = require("./routes/welcome.routes");
+const auth = require("./routes/auth.routes");
+
 const counter = require("./middlewares/counter");
 const express = require("express");
-const bodyParser = require("body-parser")
+
 const app = express();
-app.use(bodyParser.json());
+
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
 app.use(counter);
-app.get("/", Welcome.index);
-app.get("/count", Welcome.count);
-app.post("/recupere", Welcome.recupere)
-app.post("/verifierotp", Welcome.verifierotp)
+app.use(welcome);
+app.use(auth);
 
 module.exports = app;

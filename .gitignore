@@ -135,9 +135,6 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-# config file
-*config*
-
 # sublime text config
 *sublime*
 
